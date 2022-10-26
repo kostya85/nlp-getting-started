@@ -16,6 +16,12 @@
     <img width="100%" src="images/cloud-locations.PNG" style="max-width:100%;"></a>
 </p>
 
+### Text
+
+<p align="center">
+    <img width="100%" src="images/cloud-text.PNG" style="max-width:100%;"></a>
+</p>
+
 ## EDA
 
 ### Target and not target records count
