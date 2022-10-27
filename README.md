@@ -60,9 +60,24 @@
 
 Convert a collection of text documents to a matrix of token counts.
 
+В данном подходе входные данные токенизируются и представляются в виде словаря. 
+А затем документ представляется, используя этот словарь.
+
+У CountVectorize есть несколько параметров:
+- max_features — построенный словарь будет содержать только n самых часто встречающихся в корпусе токенов, отсортированных по частоте.
+- min_df — при построении словаря будут игнорироваться слова из текстов, частота которых строго ниже заданного порогового значения.
+- max_df — при построении словаря будут игнорироваться слова из текстов, частота которых строго выше заданного порогового значения.
+
 ### TF-IDF
 
 Count Vectorizer give number of frequency with respect to index of vocabulary where as tf-idf consider overall documents of weight of words
+
+Подход чем то похож на CountVectorize, только здесь для каждого токена используется метрика
+TF-IDF. 
+
+- Частота слова (Term Frequency) — подсчитывает, как часто выбранное слово появляется в документе.
+
+- Обратная частота документа (Inverse Document Frequency) — снижает вес слов, которые часто встречаются в документах.
 
 ### GloVe
 
@@ -71,3 +86,9 @@ GloVe stands for global vectors for word representation. It is an unsupervised l
 ### BERT
 
 Splitting a word into a vector of 32 numbers. Search for suitable words by measuring the distance between the axes of vectors
+
+
+### Про метрики
+Для данной задачи наиболее интересны метрики Recall и Roc Auc Score. Ведь нам важно определить 
+как можно больше бедствий из твитов, и не так страшно, если какой то твит будет опознан ложно положительно.
+Ведь страшнее не узнать о катастрофе, чем получить ложную тревогу.
