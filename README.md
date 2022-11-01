@@ -58,8 +58,6 @@
 
 ### CountVectorize
 
-Convert a collection of text documents to a matrix of token counts.
-
 В данном подходе входные данные токенизируются и представляются в виде словаря. 
 А затем документ представляется, используя этот словарь.
 
@@ -70,8 +68,6 @@ Convert a collection of text documents to a matrix of token counts.
 
 ### TF-IDF
 
-Count Vectorizer give number of frequency with respect to index of vocabulary where as tf-idf consider overall documents of weight of words
-
 Подход чем то похож на CountVectorize, только здесь для каждого токена используется метрика
 TF-IDF. 
 
@@ -81,11 +77,15 @@ TF-IDF.
 
 ### GloVe
 
-GloVe stands for global vectors for word representation. It is an unsupervised learning algorithm developed by Stanford for generating word embeddings by aggregating global word-word co-occurrence matrix from a corpus. The resulting embeddings show interesting linear substructures of the word in vector space.
+GloVe (global vectors for word representation) означает «глобальные векторы для представления слов».
+Это алгоритм обучения без учителя, разработанный в Стэнфорде.
+Основная его идея состоит в том, чтобы извлечь семантические отношения между словами используя матрицу совместного использования.
+Каждый класс в модели представляет собой слово и соответствующий ему n-мерный вектор.
 
 ### BERT
 
-Splitting a word into a vector of 32 numbers. Search for suitable words by measuring the distance between the axes of vectors
+Слова также представлены в виде векторов, но теперь учитывается и контекст. 
+Многозначные слова кодируются разными векторами в зависимости от контекста, в котором они применялись.
 
 
 ### Про метрики
